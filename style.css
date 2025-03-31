@@ -65,3 +65,7 @@ nav {
         font-size: 28px;
     }
 }
+.slider {
+    background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHNsaWRlc3xlbnwwfHx8fDE2OTY1NTQ5NzA&ixlib=rb-4.0.3&q=80&w=1080") no-repeat center center/cover;
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+}
