@@ -8,3 +8,60 @@ nav {
     color: white;
     padding: 20px 50px;
 }
+.navTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.searchInput {
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-left: 10px;
+}
+.searchInput::placeholder {
+    color: lightgray;
+}
+.searchIcon{
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+    color: #fff;
+}
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+.logo{
+    font-family: 'Lato' , sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+    .logo{
+        font-size: 28px;
+    }
+}
