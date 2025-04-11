@@ -1,5 +1,8 @@
-body {
-    font-family: 'Lato' , sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+  body {
+    font-family: "Lato" , sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -23,23 +26,14 @@ nav {
 .searchInput {
     border: none;
     background-color: transparent;
-    color: white;
-    margin-left: 10px;
 }
 .searchInput::placeholder {
     color: lightgray;
-}
-.searchIcon{
-    color: white;
-    font-size: 18px;
-    margin-left: 10px;
-    cursor: pointer;
 }
 .limitedOffer{
     font-size: 20px;
     border-bottom: 2px solid green;
     cursor: pointer;
-    color: #fff;
 }
 .navBottom{
     display: flex;
@@ -52,20 +46,8 @@ nav {
     color: lightgray;
     font-weight: 400;
 }
-.logo{
-    font-family: 'Lato' , sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-@media (max-width: 768px) {
-    .logo{
-        font-size: 28px;
-    }
-}
 .slider {
-    background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHNsaWRlc3xlbnwwfHx8fDE2OTY1NTQ5NzA&ixlib=rb-4.0.3&q=80&w=1080") no-repeat center center/cover;
+    background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
     clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
 }
