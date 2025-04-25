@@ -70,6 +70,8 @@ nav {
     width: 750px;
     height: 750px;
     border-radius: 50%;
+    background-color: transparent;
+    border: 20px solid;
     position: absolute;
   }
   
@@ -117,26 +119,31 @@ nav {
     color: black;
   }
   .sliderItem:nth-child(1) .sliderBg {
-    background-color: #369e62;
+    background-color: transparent;
+    border: 20px solid #369e62;
   }
   .sliderItem:nth-child(2) .sliderBg {
-    background-color: rebeccapurple;
+    background-color: transparent;
+    border: 20px solid rebeccapurple;
   }
   .sliderItem:nth-child(3) .sliderBg {
-    background-color: teal;
+    background-color: transparent;
+    border: 20px solid teal;
   }
   .sliderItem:nth-child(4) .sliderBg {
-    background-color: cornflowerblue;
+    background-color: transparent;
+    border: 20px solid cornflowerblue;
   }
   .sliderItem:nth-child(5) .sliderBg {
-    background-color: rgb(124, 115, 80);
+    background-color: transparent;
+    border: 20px solid rgb(124, 115, 80);
   }
   
   .sliderItem:nth-child(1) .sliderPrice {
     color: #369e62;
   }
   .sliderItem:nth-child(2) .sliderPrice {
-    color: white;
+    color: rebeccapurple;
   }
   .sliderItem:nth-child(3) .sliderPrice {
     color: teal;
@@ -145,6 +152,6 @@ nav {
     color: cornflowerblue;
   }
   .sliderItem:nth-child(5) .sliderPrice {
-    color: cornsilk;
+    color: rgb(124, 115, 80);
   }
   
