@@ -489,6 +489,7 @@ nav {
     .buyButton{
       right: 0;
       top: 0;
+      animation: alternate-reverse 1s infinite;
     }
   
     .features{
@@ -555,5 +556,10 @@ nav {
       width: 90%;
       padding: 20px;
     }
+  }
+
+  .payment.show {
+    visibility: visible;
+    opacity: 1;
   }
   
