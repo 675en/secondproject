@@ -383,7 +383,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
   }
-
+  
   footer {
     display: flex;
   }
@@ -556,21 +556,4 @@ nav {
       padding: 20px;
     }
   }
-  .payment {
-  visibility: hidden;  /* Модальное окно скрыто по умолчанию */
-  opacity: 0;  /* Скрыто */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавный переход */
-}
-
-.payment.show {
-  visibility: visible;  /* Показываем окно */
-  opacity: 1;  /* Прозрачность = 1, окно видно */
-}
+  
