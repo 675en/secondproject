@@ -52,6 +52,8 @@ nav {
     display: flex;
     align-items: center;
     overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    background-color: white;
 }
 .sliderWrapper{
      display: flex;
@@ -120,7 +122,7 @@ nav {
   }
   .sliderItem:nth-child(1) .sliderBg {
     background-color: transparent;
-    border: 10px solid #369e62;
+    border: 20px solid #369e62;
   }
   .sliderItem:nth-child(2) .sliderBg {
     background-color: transparent;
@@ -161,7 +163,7 @@ nav {
     justify-content: space-between;
     padding: 50px;
   }
-
+  
   .feature {
     display: flex;
     flex-direction: column;
@@ -184,4 +186,73 @@ nav {
     color: gray;
     width: 50%;
     height: 100px;
+  }
+
+  .product {
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .productImg {
+    width: 50%;
+  }
+  
+  .productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+  
+  .productTitle {
+    font-size: 75px;
+    font-weight: 900;
+  }
+
+  .productDesc {
+    font-style: 24px;
+    color: gray;
+  }
+
+  .colors,.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: pink;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color:last-child {
+  background-color: black;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .productButton:hover {
+    background-color: white;
+    color: black;
   }
