@@ -555,6 +555,7 @@ nav {
     .payment{
       width: 90%;
       padding: 20px;
+      display: flex;
     }
   }
 
@@ -562,4 +563,46 @@ nav {
     visibility: visible;
     opacity: 1;
   }
+  .footer-notice {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+  .footer-notice.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .scrollButton {
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translate(-50%, 0);
+    }
+    40% {
+      transform: translate(-50%, 10px);
+    }
+    60% {
+      transform: translate(-50%, 5px);
+    }
+  }  
