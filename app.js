@@ -168,47 +168,61 @@ checkoutButton.addEventListener("click", () => {
 });
 
 
-const subscribeBtn = document.getElementById('subscribeBtn');
-const emailInput = document.getElementById('emailInput');
-
-subscribeBtn.addEventListener('click', function () {
-  const email = emailInput.value.trim();
-
-  if (!email || !email.includes('@')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-
-  console.log('Subscribed with:', email);
-  alert('Thanks for subscribing!');
-
-  emailInput.value = '';
-});
-
-const fList = document.querySelectorAll(".fListItem");
-const fListItem = document.querySelectorAll(".fListItem");
-const footerNotice = document.getElementById("footerNotice");
-document.querySelectorAll(".fListItem").forEach(item => {
-  item.addEventListener("click", () => {
-    footerNotice.classList.add("show");
-    setTimeout(() => {
-      footerNotice.classList.remove("show");
-    }, 3000);
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   const fListItems = document.querySelectorAll(".fListItem");
   const footerNotice = document.getElementById("footerNotice");
 
   fListItems.forEach(item => {
     item.addEventListener("click", () => {
-      alert("This section is still under processing 🙂");
+      if (footerNotice) {
+        footerNotice.textContent = "This section is still under processing.";
+        footerNotice.style.display = "block";
 
-      footerNotice.style.display = "block";  
-      setTimeout(() => {
-        footerNotice.style.display = "none";
-      }, 3000);
+        setTimeout(() => {
+          footerNotice.style.display = "none";
+        }, 3000);
+      } else {
+        alert("This section is still under processing.");
+      }
     });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  const emailInput = document.getElementById('emailInput');
+
+  subscribeBtn.addEventListener('click', function () {
+    const email = emailInput.value.trim();
+
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    console.log('Subscribed with:', email);
+
+    const thanksMessage = document.createElement("div");
+    thanksMessage.textContent = "Thanks for subscribing!";
+    thanksMessage.style.position = "fixed";
+    thanksMessage.style.top = "50%";
+    thanksMessage.style.left = "50%";
+    thanksMessage.style.transform = "translate(-50%, -50%)";
+    thanksMessage.style.backgroundColor = "#369e62";
+    thanksMessage.style.color = "white";
+    thanksMessage.style.padding = "20px 40px";
+    thanksMessage.style.fontSize = "24px";
+    thanksMessage.style.fontWeight = "bold";
+    thanksMessage.style.borderRadius = "10px";
+    thanksMessage.style.zIndex = "999";
+
+    document.body.appendChild(thanksMessage);
+
+    setTimeout(() => {
+      thanksMessage.remove();
+    }, 3000);
+
+    emailInput.value = '';
   });
 });
